@@ -1,0 +1,21 @@
+<div>
+<label for="seats">Number of Seats:</label>
+<input
+  type="number"
+  [(ngModel)]="numberOfSeats"
+  min="1"
+  max="7"
+  id="seats"
+/>
+<button (click)="bookSeats()">Book Seats</button>
+</div>
+
+<div>
+<h3>Booked Seats:</h3>
+<p *ngIf="bookedSeats.length === 0">No seats booked yet.</p>
+<p *ngIf="bookedSeats.length > 0">
+  Seats booked: {{ bookedSeats.join(', ') }}
+</p>
+</div>
+
+<app-seat-display></app-seat-display>

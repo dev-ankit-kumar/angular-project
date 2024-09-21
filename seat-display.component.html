@@ -1,0 +1,5 @@
+<div class="seat-grid">
+<div *ngFor="let seat of seats; let i = index" [ngClass]="getSeatClass(seat)">
+  {{ i + 1 }}
+</div>
+</div>
